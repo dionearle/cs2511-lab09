@@ -56,7 +56,7 @@ public interface Set<E> extends Iterable<E> {
      *
      * @param other The other set operand.
      * @return result - A new set that is the union of these two sets.
-     * @post for all e in result, contains(e) and other.contains(e)
+     * @post for all e in result, contains(e) or other.contains(e)
      */
     public Set<E> union(Set<? extends E> other);
 
@@ -65,7 +65,7 @@ public interface Set<E> extends Iterable<E> {
      *
      * @param other The other set operand.
      * @return result - A new set that is the intersection of these two sets.
-     * @post for all e in result, contains(e) or other.contains(e)
+     * @post for all e in result, contains(e) and other.contains(e)
      */
     public Set<E> intersection(Set<? extends E> other);
 
