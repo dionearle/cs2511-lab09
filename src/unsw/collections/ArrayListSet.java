@@ -65,12 +65,11 @@ public class ArrayListSet<E> implements Set<E> {
         return elements.iterator();
     }
 
-    @SuppressWarnings("null")
 	@Override
     public Set<E> union(Set<? extends E> other) {
     	
     	// we create an empty union set which we will return
-    	Set<E> result = null;
+    	Set<E> result = new ArrayList<>();
     	
     	// we loop through all the elements in our set
     	for (E e: elements) {
@@ -90,7 +89,6 @@ public class ArrayListSet<E> implements Set<E> {
     public Set<E> intersection(Set<? extends E> other) {
     	
     	// we create an intersection set which we will return (and set it to equal our current set)
-    	@SuppressWarnings("unchecked")
 		Set<E> result = (Set<E>) elements;
     	
     	// we loop through all the elements in the other set
@@ -113,7 +111,6 @@ public class ArrayListSet<E> implements Set<E> {
      * Similarly, if a Set<Apple> contains the same elements as a Set<Fruit>
      * they are also equal.
      */
-    @SuppressWarnings("unchecked")
 	@Override
     public boolean equals(Object other) {
     	
