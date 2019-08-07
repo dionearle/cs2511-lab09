@@ -42,5 +42,4 @@ class ArrayListSetTest {
 
         assertFalse(apples.subsetOf(fruit));
     }
-
 }
